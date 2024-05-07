@@ -28,6 +28,12 @@ public class WorkshopHandler : MonoBehaviour
     private void Awake()
     {
         updateItemParams.contentPath = Application.dataPath + "/../AssetBundles";
+        updateItemParams.imagePath = Application.dataPath + "/thumbnail.png";
+
+        if (updateItemParams.imagePath.Contains("\\"))
+        {
+            updateItemParams.imagePath.Replace("\\", "/");
+        }
     }
 
     // Start is called before the first frame update
@@ -72,7 +78,8 @@ public class WorkshopHandler : MonoBehaviour
         if (result.m_eResult == EResult.k_EResultOK)
         {
             Debug.Log($"Workshop item created! (https://steamcommunity.com/sharedfiles/filedetails/?id=" + result.m_nPublishedFileId + ")");
-            
+            Debug.Log("CODE: " + result.m_nPublishedFileId + "\n IT IS COPIED TO YOUR CLIPBOARD ALREADY");
+            GUIUtility.systemCopyBuffer = result.m_nPublishedFileId.ToString();
         }
         else
             Debug.LogError($"Workshop item creation failed: {result.m_eResult}");
