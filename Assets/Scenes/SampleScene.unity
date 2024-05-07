@@ -1043,6 +1043,9 @@ MonoBehaviour:
     7. Make that parent gameobject
     a prefab inside of the "AssetBundlesWanted" folder
 
+    7b. Go to bottom of prefab
+    in inspector, create new asset bundle and name it
+
 
     8. Place interactable
     prefabs (computer, shop, spawn, token spawn) around the map
@@ -1053,12 +1056,15 @@ MonoBehaviour:
     10. Make that new parent gameobject
     a prefab inside of the same folder as earlier
 
+    10b. Go to bottom of prefab
+    in inspector, create new asset bundle and name it
 
-    11. Press ''Assets'' at the
-    top, and press "Create asset bundles"
 
-    12. Replace the "thumbnail.png" image
-    with another png (Optional)
+    11. Press ''Assets''
+    at the top, and press "Create asset bundles"
+
+    12. Replace the "thumbnail.png"
+    image with another png (Optional)
 
     13. Press "Update workshop item"'
   m_isRightToLeft: 0
