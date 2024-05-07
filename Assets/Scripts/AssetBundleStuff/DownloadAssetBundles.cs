@@ -9,23 +9,32 @@ public class DownloadAssetBundles : MonoBehaviour
     public WorkshopHandler workshopHandler;
     private void Start()
     {
-        string path = "C:/Program Files (x86)/Steam/steamapps/workshop/content/2969250/" + workshopHandler.currentlySelectedItemID;
-        string filePath = "";
+        LoadAssetBundleLevel(workshopHandler.currentlySelectedItemID);
+    }
+    public static void LoadAssetBundleLevel(ulong workshopItemID)
+    {
+        string path = "C:/Program Files (x86)/Steam/steamapps/workshop/content/2969250/" + workshopItemID;
+        List<string> filePaths = new();
         foreach (var file in Directory.GetFiles(path))
         {
             if (!file.Contains("manifest") && !file.Contains("AssetBundles"))
             {
-                filePath = file;
 
-                if (filePath.Contains("\\"))
+                if (file.Contains("\\"))
                 {
-                    filePath.Replace("\\", "/");
+                    file.Replace("\\", "/");
                 }
+
+                filePaths.Add(file);
             }
         }
-        AssetBundle bundle = AssetBundle.LoadFromFile(filePath);
-        var go = bundle.LoadAsset(bundle.GetAllAssetNames()[0]) as GameObject;
-        InstantiateGameObjectFromAssetBundles(go);
+
+        foreach (string filePath in filePaths)
+        {
+            AssetBundle bundle = AssetBundle.LoadFromFile(filePath);
+            var go = bundle.LoadAsset(bundle.GetAllAssetNames()[0]) as GameObject;
+            InstantiateGameObjectFromAssetBundles(go);
+        }
     }
     public static IEnumerator DownloadAssetBundleFromServer(string url)
     {
