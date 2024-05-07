@@ -3,12 +3,27 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using System.IO;
 public class DownloadAssetBundles : MonoBehaviour
 {
+    public WorkshopHandler workshopHandler;
     private void Start()
     {
-        string url = "C:/Program Files (x86)/Steam/steamapps/workshop/content/2969250/3240993254";
-        AssetBundle bundle =  AssetBundle.LoadFromFile(url + "/myfirstassetbundleprefab");
+        string path = "C:/Program Files (x86)/Steam/steamapps/workshop/content/2969250/" + workshopHandler.currentlySelectedItemID;
+        string filePath = "";
+        foreach (var file in Directory.GetFiles(path))
+        {
+            if (!file.Contains("manifest") && !file.Contains("AssetBundles"))
+            {
+                filePath = file;
+
+                if (filePath.Contains("\\"))
+                {
+                    filePath.Replace("\\", "/");
+                }
+            }
+        }
+        AssetBundle bundle = AssetBundle.LoadFromFile(filePath);
         var go = bundle.LoadAsset(bundle.GetAllAssetNames()[0]) as GameObject;
         InstantiateGameObjectFromAssetBundles(go);
     }

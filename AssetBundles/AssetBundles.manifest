@@ -1,7 +1,10 @@
 ManifestFileVersion: 0
-CRC: 3954640111
+CRC: 3216804727
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: dust2map
+      Dependencies: {}
+    Info_1:
+      Name: everything
       Dependencies: {}
