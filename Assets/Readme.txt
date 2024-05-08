@@ -1,6 +1,6 @@
 READ ME:
 
-How to create workshop item, make map, and upload it to workshop. Make sure you have steam open before starting.
+How to create workshop item, make map, and upload it to workshop. Make sure you have steam open before starting. Also make sure to open the "SampleScene" scene inside of the "Scenes" folder.
 
 1. Click the play button at the top
 2. Press button "Create new workshop item". When you press this, it will open it in your browser.
