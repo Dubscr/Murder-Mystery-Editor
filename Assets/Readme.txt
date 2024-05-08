@@ -35,5 +35,4 @@ You have set up everything, now you just need to build it and send it off to ste
 17. Go to WorkshopHandler and put any patchnotes you want (Optional).
 18. Press "Update workshop item"
 
-If you have done everything right, you can test it by going to the "AssetBundleHandler" gameobject and turning on the script inside of it. For this to
-work, you need to subscribe to your own workshop item. If everything is done right, when you click play, it will instantiate everything you uploaded.
+If you have done everything right, you can test it by subscribing to your own workshop item in the browser. If everything is done right, when you click play, it will instantiate everything you uploaded.

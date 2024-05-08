@@ -9,11 +9,9 @@ public class DownloadAssetBundles : MonoBehaviour
     public WorkshopHandler workshopHandler;
     private void Start()
     {
-        LoadAssetBundleLevel(workshopHandler.currentlySelectedItemID);
     }
-    public static void LoadAssetBundleLevel(ulong workshopItemID)
+    public static void LoadAssetBundleLevel(string path)
     {
-        string path = "C:/Program Files (x86)/Steam/steamapps/workshop/content/2969250/" + workshopItemID;
         List<string> filePaths = new();
         foreach (var file in Directory.GetFiles(path))
         {

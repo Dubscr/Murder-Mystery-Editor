@@ -125,13 +125,14 @@ public class WorkshopHandler : MonoBehaviour
     /// </summary>
     private IEnumerator LoadItemsRoutine(SteamUGCQueryCompleted_t response)
     {
+        string contentFolder = "";
         for (uint i = 0; i < response.m_unNumResultsReturned; i++)
         {
             // Get the Steam Workshop item from the query
             SteamUGC.GetQueryUGCResult(response.m_handle, i, out var workshopItem);
             SteamUGC.DownloadItem(workshopItem.m_nPublishedFileId, true);
             // Get the size, folder and timestamp of the Steam Workshop item
-            SteamUGC.GetItemInstallInfo(workshopItem.m_nPublishedFileId, out var size, out var contentFolder, 255, out var timestamp);
+            SteamUGC.GetItemInstallInfo(workshopItem.m_nPublishedFileId, out var size, out contentFolder, 255, out var timestamp);
 
             Debug.Log(size);
 
@@ -162,6 +163,7 @@ public class WorkshopHandler : MonoBehaviour
                 }
             }
         }
+        DownloadAssetBundles.LoadAssetBundleLevel(contentFolder);
     }
 
     public void OnClickUpdateWorkshopItem()
