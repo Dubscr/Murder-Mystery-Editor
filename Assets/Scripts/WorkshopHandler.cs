@@ -78,6 +78,7 @@ public class WorkshopHandler : MonoBehaviour
         if (result.m_eResult == EResult.k_EResultOK)
         {
             Debug.Log($"Workshop item created! (https://steamcommunity.com/sharedfiles/filedetails/?id=" + result.m_nPublishedFileId + ")");
+            Application.OpenURL("https://steamcommunity.com/sharedfiles/filedetails/?id=" + result.m_nPublishedFileId);
             Debug.Log("CODE: " + result.m_nPublishedFileId + "\n IT IS COPIED TO YOUR CLIPBOARD ALREADY");
             GUIUtility.systemCopyBuffer = result.m_nPublishedFileId.ToString();
         }

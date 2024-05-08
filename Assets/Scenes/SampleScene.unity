@@ -1014,59 +1014,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Steps to make/upload map:
-
-
-    1a. Click the play button at the top
-
-    1b.
-    Press button "Create new workshop item".
-
-    1c. Click the play button again,
-    to stop it from running
-
-
-    2. Copy code that is shown in console
-
-    3. In
-    hierarchy, go to "Steam Workshop"
-
-    4. Paste code into "Currently selected
-    item ID"
-
-
-    5. Make map, hower you''d like.
-
-    6. Put map inside of one
-    parent gameobject (Make sure it is at 0,0,0)
-
-    7. Make that parent gameobject
-    a prefab inside of the "AssetBundlesWanted" folder
-
-    7b. Go to bottom of prefab
-    in inspector, create new asset bundle and name it
-
-
-    8. Place interactable
-    prefabs (computer, shop, spawn, token spawn) around the map
-
-    9. Put all of
-    those inside of one parent gameobject
-
-    10. Make that new parent gameobject
-    a prefab inside of the same folder as earlier
-
-    10b. Go to bottom of prefab
-    in inspector, create new asset bundle and name it
-
-
-    11. Press ''Assets''
-    at the top, and press "Create asset bundles"
-
-    12. Replace the "thumbnail.png"
-    image with another png (Optional)
-
-    13. Press "Update workshop item"'
+  m_text: Check readme file in assets
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1075,8 +1023,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1240,7 +1188,7 @@ MonoBehaviour:
     contentPath: 
     imagePath: 
     changeNotes: Put your patch notes here
-  currentlySelectedItemID: 3241820998
+  currentlySelectedItemID: 9999999999
 --- !u!850595691 &1018849458
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1445,7 +1393,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464289767}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 953a8a367d3fd384d9c2efc015e16862, type: 3}
   m_Name: 
