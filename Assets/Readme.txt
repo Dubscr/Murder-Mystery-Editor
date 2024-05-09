@@ -36,3 +36,4 @@ You have set up everything, now you just need to build it and send it off to ste
 18. Click play button, then in game tab, press "Update workshop item"
 
 If you have done everything right, you can test it by subscribing to your own workshop item in the browser and launching the normal game.
+If you want to make changes after first upload, make sure to repeat steps 15-18.
