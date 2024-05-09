@@ -33,6 +33,6 @@ You have set up everything, now you just need to build it and send it off to ste
 15. Press 'Assets' at the top, and press "Create asset bundles".
 16. Replace the "thumbnail.png" image with another png of the same name and also png (Optional).
 17. Go to WorkshopHandler and put any patchnotes you want (Optional).
-18. Press "Update workshop item"
+18. Click play button, then in game tab, press "Update workshop item"
 
-If you have done everything right, you can test it by subscribing to your own workshop item in the browser. If everything is done right, when you click play, it will instantiate everything you uploaded.
+If you have done everything right, you can test it by subscribing to your own workshop item in the browser and launching the normal game.

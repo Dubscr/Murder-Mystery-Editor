@@ -163,7 +163,7 @@ public class WorkshopHandler : MonoBehaviour
                 }
             }
         }
-        DownloadAssetBundles.LoadAssetBundleLevel(contentFolder);
+        //DownloadAssetBundles.LoadAssetBundleLevel(contentFolder);
     }
 
     public void OnClickUpdateWorkshopItem()
